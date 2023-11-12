@@ -67,7 +67,6 @@ input {
     border: 0;
     outline: none;
     border-bottom: 1px solid rgba(33, 39, 69, 0.1);
-    /* margin-bottom: 0.5rem; */
     color: #212745;
     font-weight: 300;
     font-size: 1.1rem;
@@ -98,6 +97,7 @@ input + span::after {
     font-weight: 500;
     font-size: 1rem;
     opacity: 0;
+    white-space: pre-wrap;
 }
 
 input[id ='email']:not(:placeholder-shown):invalid + span::after {
@@ -105,9 +105,24 @@ input[id ='email']:not(:placeholder-shown):invalid + span::after {
     content: 'Please enter a valid e-mail';
     transition: 0.6s ease-in-out;
 }
-input[type ='tel']:not(:placeholder-shown):invalid + span::after {
+input[id ='phone']:not(:placeholder-shown):invalid + span::after {
     opacity: 1;
     content: 'Must be a ten digits number';
+    transition: 0.6s ease-in-out;
+}
+input[id ='password']:not(:placeholder-shown):invalid + span::after {
+    opacity: 1;
+    content: 'Min 8 characters \a At least one letter and one number';
+    transition: 0.6s ease-in-out;
+}
+input[id ='first-name']:not(:placeholder-shown):invalid + span::after {
+    opacity: 1;
+    content: 'Max 20 characters';
+    transition: 0.6s ease-in-out;
+}
+input[id ='last-name']:not(:placeholder-shown):invalid + span::after {
+    opacity: 1;
+    content: 'Max 20 characters';
     transition: 0.6s ease-in-out;
 }
 
