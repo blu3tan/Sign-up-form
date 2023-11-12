@@ -18,8 +18,7 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    /* flex: 1; */
-    padding: 2rem;
+    padding: 4rem 2rem;
     min-height: 20vh;
     background-color: aquamarine;
 }
@@ -47,7 +46,7 @@ body {
 .signup {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;  
+    gap: 2.5rem;  
 }
 
 .header {
@@ -56,9 +55,10 @@ body {
     gap: 1rem; 
 }
 
-
-
-
+.form-row {
+    display: flex;
+    flex-direction: column;
+}
 
 input {
     width: 100%;
@@ -66,11 +66,14 @@ input {
     background-color: transparent;
     border: 0;
     outline: none;
-    border-bottom: 2px solid rgba(33, 39, 69, 0.1);
+    border-bottom: 1px solid rgba(33, 39, 69, 0.1);
+    /* margin-bottom: 0.5rem; */
     color: #212745;
     font-weight: 300;
     font-size: 1.1rem;
-    transition: all 0.4s ease-in-out;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+
 }
 
 input:focus {
@@ -83,8 +86,25 @@ input:valid {
     border-bottom: 2px solid #77CF7C;
 }
 
-input:invalid {
-    /* border-bottom: 2px solid #EC5C63; */
+input:not(:placeholder-shown):invalid {
+    border: 2px solid #EC5C63;
+    border-radius: 0.3rem;
+}
+
+input + span::after {
+    position: absolute;
+    content: '';
+    color: #EC5C63;
+    padding-top: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    opacity: 0;
+}
+
+input:not(:placeholder-shown):invalid + span::after {
+    opacity: 1;
+    content: 'Wrong';
+    transition: 0.6s ease-in-out;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -96,6 +116,10 @@ body {
     height: 100vh;
 }
 
+h1 {
+    font-size: 3rem;
+}
+
 .main-container{
     width: 70vw;
     flex-direction: row;
@@ -103,21 +127,25 @@ body {
 
 .form-input {
     padding: 5rem 3rem;
+    font-size: 1.3rem;
 }
 
 .form-row {
+    display: flex;
+    flex-direction: column;
     width: 40%;
 }
 
 .signup {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 4rem;
+    justify-content:space-between;
+    gap: 3rem;
 }
 
 .form-hero {
     min-width: 20vw;
+    padding-top: 10rem;
 }
 
 }
