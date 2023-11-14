@@ -6,7 +6,9 @@
 
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
     margin: 5vh 0;
     background-color: #d1d0cd;
     font-family: 'Rubik', sans-serif;
@@ -29,6 +31,12 @@ div.title {
     padding: 0.6rem;
     background-color: rgb(64, 57, 243, 1);
     align-self: stretch;
+}
+
+.blu3 {
+    font-family: 'Rubik', sans-serif;
+    color: #202644;
+    font-size: 1.1rem;
 }
 
 .credits, a {
@@ -89,6 +97,7 @@ div.title {
 
 .compare {
     position: absolute;
+    top: 4rem;
     color: #EC5C63;
     padding-top: 0.5rem;
     font-weight: 500;
@@ -98,12 +107,10 @@ div.title {
     transition: 0.6s ease-in-out; 
 }
 
-/* .toggle {
-    position: absolute;
-    opacity: 0;
-} */
-
-
+/* Custom class to the password-check input div so the message doesn't break the layout */
+.pwd {
+    position: relative;
+}
 
 button {
     font-family: 'Rubik', sans-serif;
@@ -220,7 +227,6 @@ h1 {
 
 div.title {
     text-align: center;
-    /* background-color: rgba(33, 39, 69, 0.9); */
     background-color: #3E38F3;
     border-radius: 0;
 
