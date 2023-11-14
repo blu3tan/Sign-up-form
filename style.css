@@ -9,7 +9,6 @@ body {
     justify-content: center;
     margin: 5vh 0;
     background-color: #d1d0cd;
-    /* background-color: silver; */
     font-family: 'Rubik', sans-serif;
     color: #202644;
     font-size: 1.1rem;
@@ -66,7 +65,7 @@ div.title {
 .main-container {
     display: flex;
     flex-direction: column;
-    width: 80vw;
+    width: 90vw;
     border-radius: 1rem;
     overflow: hidden;
 }
@@ -74,7 +73,7 @@ div.title {
 .signup {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;  
+    gap: 3.5rem;  
 }
 
 .header {
@@ -88,9 +87,28 @@ div.title {
     flex-direction: column;
 }
 
+.compare {
+    position: absolute;
+    color: #EC5C63;
+    padding-top: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    white-space: pre-wrap;
+    opacity: 1;
+    transition: 0.6s ease-in-out; 
+}
+
+/* .toggle {
+    position: absolute;
+    opacity: 0;
+} */
+
+
+
 button {
     font-family: 'Rubik', sans-serif;
     font-size: 1.1rem;
+    margin-top: 0.5rem;
     padding: 1rem;
     border: 0;
     background-color: #3E38F3;
@@ -134,10 +152,14 @@ input:focus {
 }
 
 input:not(:placeholder-shown):valid {
+    border: 0;
+    outline: none;
     border-bottom: 2px solid #77CF7C;
 }
 
 input:not(:placeholder-shown):invalid {
+    border: 0;
+    outline: none;
     border-bottom: 2px solid #EC5C63;
 }
 
@@ -164,7 +186,7 @@ input[id ='phone']:not(:placeholder-shown):invalid + span::after {
 }
 input[id ='password']:not(:placeholder-shown):invalid + span::after {
     opacity: 1;
-    content: 'Min 8 characters \a At least one letter and one number';
+    content: 'Min 8 characters, alphanumeric\a no special characters';
     transition: 0.6s ease-in-out;
 }
 input[id ='first-name']:not(:placeholder-shown):invalid + span::after {
@@ -218,7 +240,7 @@ div.credits {
 }
 
 .main-container{
-    width: 75vw;
+    width: 80vw;
     flex-direction: row;
 }
 
@@ -237,7 +259,7 @@ div.credits {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content:space-between;
-    gap: 3rem;
+    gap: 3.5rem;
 }
 
 .form-hero {

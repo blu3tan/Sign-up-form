@@ -51,14 +51,14 @@
                 </div>
                 <div class="form-row">
                     <label for="password-check">Confirm Password</label>
-                    <input id="password-check" name="password-check" type="password" placeholder="" required>
-                    <span></span>
+                    <input id="password-check" name="password-check" type="password" class="pwd" placeholder="" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,12}$">
+                    <span id="check"></span>
                 </div>
                 <button type="submit" class="button">Create account</button>
 
             </form>
         </div>
     </div>
-
+<script src="script.js"></script>
 </body>
 </html>
