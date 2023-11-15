@@ -17,7 +17,6 @@ function compare() {
         check.classList.remove('compare');
     }
     else if (pwd.value !== pwdcheck.value) {
-        check.classList.add('reset');
         check.classList.add('compare');
         check.innerHTML = 'Please enter the same password';
     }
