@@ -13,16 +13,16 @@ pwd.addEventListener('input', () => {
 
 function compare() {
     if (!pwdcheck.value) {
-        check.innerHTML = '';
+        check.innerHTML = ' ';
         check.classList.remove('compare');
     }
     else if (pwd.value !== pwdcheck.value) {
+        check.classList.add('reset');
         check.classList.add('compare');
-        check.classList.remove('toggle');
         check.innerHTML = 'Please enter the same password';
     }
     else {
-        check.innerHTML = '';
+        check.innerHTML = ' ';
         check.classList.remove('compare');
     }
 };
@@ -31,7 +31,7 @@ function compare() {
 
 function comparePwdAfter() {
     if (pwd.value !== pwdcheck.value) {
-        check.innerHTML = '';
+        check.innerHTML = ' ';
         check.classList.remove('compare');
     }
 }

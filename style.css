@@ -33,7 +33,13 @@ div.title {
     align-self: stretch;
 }
 
-.blu3 {
+span {
+    font-size: 1rem;
+    color: #EC5C63;
+}
+
+.blu3,
+.footer {
     font-family: 'Rubik', sans-serif;
     color: #202644;
     font-size: 1.1rem;
@@ -77,7 +83,6 @@ div.title {
     flex-direction: column;
     width: 90vw;
     border-radius: 1rem;
-    /* overflow: hidden; */
 }
 
 .signup {
@@ -97,14 +102,12 @@ div.title {
     flex-direction: column;
 }
 
+
 .compare {
     position: absolute;
     top: 4rem;
-    color: #EC5C63;
     padding-top: 0.5rem;
     font-weight: 500;
-    font-size: 1rem;
-    white-space: pre-wrap;
     opacity: 1;
     transition: 0.6s ease-in-out; 
 }
@@ -174,7 +177,7 @@ input:not(:placeholder-shown):invalid {
 
 input + span::after {
     position: absolute;
-    content: '';
+    content: ' ';
     color: #EC5C63;
     padding-top: 0.5rem;
     font-weight: 500;
